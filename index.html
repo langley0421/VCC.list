@@ -1,90 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Progate</title>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UnityTools</title>
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <div class="header-left">
-        <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">
-      </div>
-      <span class="fa fa-bars menu-icon"></span>
-      <div class="header-right">
-        <a href="#">レッスン</a>
-        <a href="#">新規登録</a>
-        <a href="#" class="login">ログイン</a>
-      </div>
-    </div>
-  </header>
-  <div class="top-wrapper">
-    <div class="container">
-      <h1>LEARN TO CODE.<br>LEARN TO BE CREATIVE.</h1>
-      <p>Progateはオンラインプログラミング学習サービスです。<br>初心者にもやさしいスライドとレッスンで、ウェブサービスを作りながらプログラミングを学んでいきましょう。</p>
-      <div class="btn-wrapper">
-        <a href="#" class="btn signup">新規登録はこちら</a>
-        <p>or</p>
-        <a href="#" class="btn facebook"><span class="fa fa-facebook"></span>Facebookで登録</a>
-        <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Twitterで登録</a>
-      </div>
-    </div>
-  </div>
-  <div class="lesson-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>Learn Where to Get Started!</h2>
-      </div>
-      <div class="lessons">
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/html.png">
-            <p>HTML & CSS</p>
-          </div>
-          <p class="text-contents">ウェブページの作成に使用される言語です。HTMLとCSSを組み合わせることで、静的なページを作り上げることができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/jQuery.png">
-            <p>jQuery</p>
-          </div>
-          <p class="text-contents">素敵な動きを手軽に実装できるJavaScriptライブラリです。 アニメーション効果をつけたり、Ajax（エイジャックス）を使って外部ファイルを読み込んだりと色々なことができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/ruby.png">
-            <p>Ruby</p>
-          </div>
-          <p class="text-contents">オープンソースの動的なプログラミング言語で、 シンプルさと高い生産性を備えています。大きなWebアプリケーションから小さな日用ツールまで、さまざまなソフトウェアを作ることができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/php.png">
-            <p>PHP</p>
-          </div>
-          <p class="text-contents">HTMLだけではページの内容を変えることはできません。PHPはHTMLにプログラムを埋め込み、それを可能にします。</p>
-        </div>
-      </div>
-      <div class="clear"></div>
-    </div>
-  </div>
-  <div class="message-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>さぁ、あなたもProgateでプログラミングを学んでみませんか?</h2>
-        <h3>Let's learn to code, learn to be creative!</h3>
-      </div>
-      <span class="btn message">さっそく開発する</span>
-    </div>
-  </div>
-  <footer>
-    <div class="container">
-      <img src="https://prog-8.com/images/html/advanced/footer_logo.png">
-      <p>Learn to Code, Learn to be Creative.</p>
-    </div>
-  </footer>
+    <!-- ヘッダー -->
+    <header class="header">
+        <h1>Unity追加ツール</h1>
+        <button id="dark-mode-toggle">
+            <!-- デフォルトは太陽アイコン -->
+            <span id="icon">
+                <svg class="icon-sun" fill="currentColor" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path>
+                </svg>
+            </span>
+        </button>
+    </header>
+
+    <!-- サイドバー（見出し部分） -->
+    <aside class="sidebar">
+        <ul>
+            <li><a href="#section1" class="nav-link">lilToon</a></li>
+            <li><a href="#section2" class="nav-link">AAO: Avatar Optimizer</a></li>
+            <li><a href="#section3" class="nav-link">anatawa12’s gist pack for Unity</a></li>
+            <li><a href="#section4" class="nav-link">Modular Avatar</a></li>
+            <li><a href="#section5" class="nav-link">AvatarMenuCreatorForMA</a></li>
+            <li><a href="#section6" class="nav-link">最新のインポートアイテムに色を付けるやつ</a></li>
+            <li><a href="#section7" class="nav-link">TexTransTool【UnityEditor拡張】</a></li>
+            <li><a href="#section8" class="nav-link"></a></li>
+        </ul>
+    </aside>
+
+    <!-- 本文 -->
+    <main class="content">
+        <section id="section1">
+            <h2>lilToon</h2>
+            <p><a href="https://lilxyzw.github.io/lilToon/" target="" id="link">lilToon</a>
+            </p>
+        </section>
+        <section id="section2">
+            <h2>AAO: Avatar Optimizer</h2>
+            <p><a href="https://vpm.anatawa12.com/avatar-optimizer/ja/" target="" id="link">AAO: Avatar Optimizer</a>
+        </section>
+        <section id="section3">
+            <h2>anatawa12’s gist pack for Unity</h2>
+            <p><a href="https://vpm.anatawa12.com/gists/ja/" target="" id="link">anatawa12’s gist pack for Unity</a>
+        </section>
+        <section id="section4">
+            <h2>Modular Avatar</h2>
+            <p><a href="https://modular-avatar.nadena.dev/ja" target="" id="link">Modular Avatar</a>
+        </section>
+        <section id="section5">
+            <h2>AvatarMenuCreatorForMA</h2>
+            <p><a href="https://vpm.narazaka.net/" target="" id="link">AvatarMenuCreatorForMA</a>
+        </section>
+        <section id="section6">
+            <h2>最新のインポートアイテムに色を付けるやつ</h2>
+            <p><a href="https://booth.pm/ja/items/3304031" target="" id="link">最新のインポートアイテムに色を付けるやつ</a>
+        </section>
+        <section id="section7">
+            <h2>TexTransTool【UnityEditor拡張】</h2>
+            <p><a href="https://booth.pm/ja/items/4833984" target="" id="link">TexTransTool【UnityEditor拡張】</a>
+        </section>
+        <section id="section8">
+            <h2></h2>
+            <p><a href="" target=""></a>
+        </section>
+    </main>
+
+    <!-- 次のページへのリンク none-->
+    <p class="next-page-link">次のページへ</p>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
