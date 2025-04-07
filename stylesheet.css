@@ -21,15 +21,15 @@ body {
     left: 0;
     width: 100%;
     height: 60px;
-    background-color: #fff; /* ヘッダーの背景色を白に変更 */
-    color: #333; /* ヘッダーのテキスト色を変更 */
+    background-color: #fff;
+    color: #333;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
     z-index: 1000;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* ヘッダーに影を追加 */
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* 薄い線を追加 */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
 }
 
 .header h1 {
@@ -37,27 +37,33 @@ body {
 }
 
 .content section {
-    padding-bottom: 30px; /* 下に30pxのパディングを追加 */
+    padding-bottom: 30px; 
 }
 
 .content section h2 {
-    margin-bottom: 20px; /* 下に20pxのマージンを追加 */
+    margin-bottom: 20px; 
     }
 
 #dark-mode-toggle {
     background: none;
     border: none;
-    color: #333; /* ボタンの色を変更 */
+    color: #333; 
     cursor: pointer;
     font-size: 1.5em;
 }
 
 #link {
-    padding: 20px 30px;
-    border: 1px solid #bcbec0; /* 薄い線を追加 */
+    display: inline-block; 
+    padding: 15px 25px;
+    border: 1px solid #dadada; 
     border-radius: 10px;
     text-decoration: none;
     background-color: #f1f1f1;
+    word-wrap: break-word; 
+    max-width: 100%; 
+    font-family: "Arial", "Helvetica", sans-serif; /* ゴシック体を指定 */
+    font-weight: bold; /* 太字 */
+    
 }
 
 /* サイドバー（見出し）の設定 */
@@ -68,11 +74,11 @@ body {
     width: 400px;
     bottom: 0;
     position: fixed;
-    background-color: #fff; /* サイドバーの背景色を白に変更 */
+    background-color: #fff; 
     overflow-y: auto;
     padding: 20px;
-    box-shadow: 1px 0 4px rgba(0, 0, 0, 0.1); /* サイドバーに影を追加 */
-    border-right: 1px solid rgba(0, 0, 0, 0.1); /* 薄い線を追加 */
+    box-shadow: 1px 0 4px rgba(0, 0, 0, 0.1); 
+    border-right: 1px solid rgba(0, 0, 0, 0.1); 
 }
 
 .sidebar ul {
@@ -97,7 +103,7 @@ body {
     font-weight: bold;
 }
 body a {
-    color: #333; /* リンクの色を変更 */
+    color: #333;
 }
 /* 本文の設定 */
 .content {
@@ -123,8 +129,10 @@ body a {
     border-radius: 5px;
     opacity: 0;
     transition: opacity 0.3s ease;
-    border: 1px solid #bcbec0; /* 薄い線を追加 */
+    border: 1px solid #bcbec0;
 }
+
+
 
 /* ダークモード */
 body.dark-mode {
@@ -141,7 +149,7 @@ body.dark-mode .header h1 {
 }
 
 body.dark-mode #dark-mode-toggle {
-    color: #eee; /* ボタンの色を変更 */
+    color: #eee; 
 }
 
 body.dark-mode .sidebar {
@@ -153,12 +161,12 @@ body.dark-mode .sidebar ul li a {
 }
 
 body.dark-mode a {
-    color: #eee; /* リンクの色を変更 */
+    color: #eee; 
 }
 
 body.dark-mode #link {
     padding: 20px 30px;
-    border: 1px solid #eee; /* 薄い線を追加 */
+    border: 1px solid #5e5e5e; 
     border-radius: 10px;
     text-decoration: none;
     background-color: #333;
@@ -169,19 +177,42 @@ body.scrolled-to-bottom .next-page-link {
     opacity: 1;
 }
 
-/* ダークモード時のSVGアイコンの色を変更 */
-.dark-mode-icon path {
-    fill: #ffeb3b; /* ダークモードの時は月のアイコンが黄色 */
-}
+
+
 
 /*メディアクエリ*/
+
+  
+  /* 画面幅が992px以下の場合（タブレットなど） */
+  @media (max-width: 1000px) {
+    .sidebar {
+      width: 300px;
+    }
+
+    .content {
+      margin-left: 350px;
+    }
+    #link {
+        padding: 20px 25px;
+    }
+  }
+  
+  /* 画面幅が768px以下の場合（スマートフォンなど） */
 @media (max-width: 768px) {
     .sidebar {
       width: 250px;
     }
 
     .content {
-      margin-left: 300px;
+      margin-left: 280px;
+    }
+
+    .content section h2 {
+        font-size: 18px;
+    }
+
+    #link {
+        padding: 10px 15px;
     }
   }
   
@@ -192,6 +223,6 @@ body.scrolled-to-bottom .next-page-link {
     }
 
     .content {
-      margin-left: 250px;
+      margin-left: 200px;
     }
   }
