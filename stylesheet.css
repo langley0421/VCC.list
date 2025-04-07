@@ -95,7 +95,9 @@ body {
     opacity: 1;
     font-weight: bold;
 }
-
+body a {
+    color: #333; /* リンクの色を変更 */
+}
 /* 本文の設定 */
 .content {
     margin-top: 50px;
@@ -133,12 +135,32 @@ body.dark-mode .header {
     background-color: #1e1e1e;
 }
 
+body.dark-mode .header h1 {
+    color: #eee;
+}
+
+body.dark-mode #dark-mode-toggle {
+    color: #eee; /* ボタンの色を変更 */
+}
+
 body.dark-mode .sidebar {
     background-color: #1e1e1e;
 }
 
 body.dark-mode .sidebar ul li a {
     color: #ccc;
+}
+
+body.dark-mode a {
+    color: #eee; /* リンクの色を変更 */
+}
+
+body.dark-mode #link {
+    padding: 20px 30px;
+    border: 1px solid #eee; /* 薄い線を追加 */
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #333;
 }
 
 /* 本文最下部に到達時にページリンク表示 */
@@ -150,3 +172,17 @@ body.scrolled-to-bottom .next-page-link {
 .dark-mode-icon path {
     fill: #ffeb3b; /* ダークモードの時は月のアイコンが黄色 */
 }
+
+/*メディアクエリ*/
+@media (max-width: 768px) {
+    .sidebar {
+      width: 250px;
+    }
+  }
+  
+  /* 画面幅が480px以下の場合（スマートフォンなど） */
+  @media (max-width: 480px) {
+    .sidebar {
+      width: 200px;
+    }
+  }
