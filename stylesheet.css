@@ -66,7 +66,8 @@ body {
     top: 60px;
     left: 0;
     width: 400px;
-    height: calc(100vh - 60px);
+    bottom: 0;
+    position: fixed;
     background-color: #fff; /* サイドバーの背景色を白に変更 */
     overflow-y: auto;
     padding: 20px;
@@ -79,7 +80,7 @@ body {
 }
 
 .sidebar ul li {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .sidebar ul li a {
@@ -100,7 +101,7 @@ body a {
 }
 /* 本文の設定 */
 .content {
-    margin-top: 50px;
+    margin-top: 100px;
     margin-left: 500px;
     padding: 20px;
     flex-grow: 1;
@@ -178,11 +179,19 @@ body.scrolled-to-bottom .next-page-link {
     .sidebar {
       width: 250px;
     }
+
+    .content {
+      margin-left: 300px;
+    }
   }
   
   /* 画面幅が480px以下の場合（スマートフォンなど） */
   @media (max-width: 480px) {
     .sidebar {
       width: 200px;
+    }
+
+    .content {
+      margin-left: 250px;
     }
   }
